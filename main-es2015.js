@@ -201,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<h3>Market Price (USD)</h3>\n<!-- <app-chart [chart]=\"marketPriceChart\"></app-chart> -->\n<p>Avarage USD market price across major bitcoin exchanges.</p>\n<h3>Confirmed Transactions Per Day</h3>\n<!-- <app-chart [chart]=\"dailyTransChart\"></app-chart> -->\n<p>The number of daily confirmed transactions.</p>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<h3>Market Price (USD)</h3>\n<app-chart [chart]=\"marketPriceChart\"></app-chart>\n<p>Avarage USD market price across major bitcoin exchanges.</p>\n<h3>Confirmed Transactions Per Day</h3>\n<app-chart [chart]=\"dailyTransChart\"></app-chart>\n<p>The number of daily confirmed transactions.</p>");
 
 /***/ }),
 
@@ -1461,8 +1461,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-
 
 
 
@@ -1474,8 +1472,7 @@ let BitCoinService = class BitCoinService {
         this.http = http;
     }
     getRate() {
-        // return this.http.get(RATE_API);
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(0.000156);
+        return this.http.get(RATE_API);
     }
     getMarketPrice() {
         return this.http.get(MARKET_PRICE_API);

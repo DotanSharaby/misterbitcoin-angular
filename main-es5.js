@@ -311,7 +311,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n<h3>Market Price (USD)</h3>\n<!-- <app-chart [chart]=\"marketPriceChart\"></app-chart> -->\n<p>Avarage USD market price across major bitcoin exchanges.</p>\n<h3>Confirmed Transactions Per Day</h3>\n<!-- <app-chart [chart]=\"dailyTransChart\"></app-chart> -->\n<p>The number of daily confirmed transactions.</p>";
+    __webpack_exports__["default"] = "\n<h3>Market Price (USD)</h3>\n<app-chart [chart]=\"marketPriceChart\"></app-chart>\n<p>Avarage USD market price across major bitcoin exchanges.</p>\n<h3>Confirmed Transactions Per Day</h3>\n<app-chart [chart]=\"dailyTransChart\"></app-chart>\n<p>The number of daily confirmed transactions.</p>";
     /***/
   },
 
@@ -2657,12 +2657,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
-    /* harmony import */
-
-
-    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
 
     var RATE_API = 'https://blockchain.info/tobtc?currency=USD&value=1';
     var MARKET_PRICE_API = 'https://api.blockchain.info/charts/market-price?timespan=2months&format=json&cors=true';
@@ -2680,8 +2674,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(BitCoinService, [{
         key: "getRate",
         value: function getRate() {
-          // return this.http.get(RATE_API);
-          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(0.000156);
+          return this.http.get(RATE_API);
         }
       }, {
         key: "getMarketPrice",
