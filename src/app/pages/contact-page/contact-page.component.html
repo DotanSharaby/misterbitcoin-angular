@@ -1,0 +1,3 @@
+<app-contact-filter (filterContacts)='displayFilter($event)'></app-contact-filter>
+<app-contact-list [contacts]="contacts$ | async"></app-contact-list>
+<fa name="plus" routerLink="/contact-add"></fa>

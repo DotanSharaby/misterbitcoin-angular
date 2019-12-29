@@ -1,0 +1,21 @@
+
+<form *ngIf="contactToEdit">
+    <h4 *ngIf="contactToEdit._id">Edit Contact</h4>
+    <div class="my-icons-container">
+        <fa (click)="goBack()" name="arrow-left" class="my-icons back-icon"></fa>
+        <fa (click)="saveContact()" name="check-square" class="my-icons save-icon"></fa>
+    </div>
+    <label>
+        name:
+        <input [(ngModel)]="contactToEdit.name" name="name" type="text" />
+    </label>
+    <label>
+        phone:
+        <input [(ngModel)]="contactToEdit.phone" name="phone" type="text" />
+    </label>
+    <label>
+        email:
+        <input [(ngModel)]="contactToEdit.email" name="email" type="text" />
+    </label>
+</form>
+<button *ngIf="contactToEdit && contactToEdit._id" (click)="removeContact()" class="btn btn-dark">Remove</button>

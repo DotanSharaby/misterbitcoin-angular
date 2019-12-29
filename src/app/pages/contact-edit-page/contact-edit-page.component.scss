@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+    label{
+        padding: 5px;
+        margin: 10px;
+    }
+}
+.save-icon{
+    margin-right: 20%;
+}
+.back-icon{
+    margin-left: 20%;
+}

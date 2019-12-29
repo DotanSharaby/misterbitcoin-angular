@@ -1,0 +1,17 @@
+<header [class.opened-menu]="isMenuOpen">
+    <div class="screen" (click)="toggleMenu()"></div>
+    <h2>Mister BitCoin</h2>
+    <nav (click)="toggleMenu()" class="navbar-nav">
+        <a routerLink="/" class="nav-item">
+            <fa name="home"></fa>
+        </a>
+        <a routerLink="/contacts" class="nav-item">
+            <fa name="address-book-o"></fa>
+        </a>
+        <a routerLink="/statistics" class="nav-item">
+            <fa name="line-chart"></fa>
+        </a>
+    </nav>
+    <button (click)="toggleMenu()" class="menu-btn">☰</button>
+
+</header>

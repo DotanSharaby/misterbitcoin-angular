@@ -1,0 +1,19 @@
+app-contact-page {
+
+    .fa {
+        font-size: 40px;
+        color: rgb(38, 182, 182);
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        border: 3px solid rgb(38, 182, 182);
+        border-radius: 50px;
+        width: 46px;
+        cursor: pointer;
+
+        &:hover {
+            transition: all 0.3;
+            background-color: #ffffffc7;
+        }
+    }
+}

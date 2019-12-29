@@ -1,0 +1,19 @@
+<section *ngIf="(user$ | async) as user;else toSignUp">
+    <section class="user-details-container">
+        <h3>Hello {{user.name}} !</h3>
+        <label>
+            <img height="20px" src="../../../assets/coin.png" />
+            Coins: {{user.coins}}
+        </label>
+
+        <label *ngIf="(rate$ | async) as rate">
+            <fa name="bitcoin"></fa> Market Rate: {{rate}}
+        </label>
+    </section>
+    <app-moves-list [transfers]="user.moves"></app-moves-list>
+</section>
+
+<ng-template #toSignUp>
+    <h3>Welcome ! please signup</h3>
+    <button routerLink="/signup">signup</button>
+</ng-template>

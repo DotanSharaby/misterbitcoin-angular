@@ -1,0 +1,4 @@
+<section *ngIf="contact" [routerLink]="'/contact-details/'+contact._id" class="contact-prev">
+    <img [src]="contact.imgUrl" height="50px" />
+    <p>{{contact.name}}</p>
+</section>

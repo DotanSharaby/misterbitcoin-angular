@@ -1,0 +1,15 @@
+.details-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-around;
+    max-width: 350px;
+    padding: 20px;
+    img{
+        align-self: center;
+        margin: 10px;
+    }
+    button{
+        margin: 5px 5px;
+    }
+}

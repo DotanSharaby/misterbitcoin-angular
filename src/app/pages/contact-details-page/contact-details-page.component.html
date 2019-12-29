@@ -1,0 +1,17 @@
+<section *ngIf="contact" class="details-container">
+    <div class="my-icons-container">
+        <fa (click)="goBack()" name="arrow-left" class="my-icons back-icon"></fa>
+        <img [src]="contact.imgUrl" height="50px" />
+        <fa [routerLink]="'/contact-edit/' + contact._id" name="edit" class="my-icons edit-icon"></fa>
+    </div>
+    <section>
+        <h3>{{contact.name}}</h3>
+        <h3>{{contact.email}}</h3>
+        <h3>{{contact.phone}}</h3>
+    </section>
+    <section *ngIf="user$ | async as user">
+        <app-transfer-fund [contactName]="contact.name" [user]="user" (transfer)="transfer($event)">
+        </app-transfer-fund>
+        <app-moves-list [transfers]="transfersToShow(contact._id, user) | slice:0:3"></app-moves-list>
+    </section>
+</section>

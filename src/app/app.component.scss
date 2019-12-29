@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    color: #0A090C;
+    background-color: #F0EDEE;
+    margin: 0;
+    font-family: cursive;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+    padding: 5px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.my-icons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-icons {
+    font-size: 2em;
+    cursor: pointer;
+    outline: none;
+}
+
+.clean-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

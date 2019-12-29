@@ -1,0 +1,101 @@
+app-header {
+    header {
+        padding: 0 25px;
+        background-color: #fff;
+        border-bottom: 1px solid #cbd0d0;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 75px;
+        transition: all 0.2s ease-in-out;
+
+        h2 {
+            padding-top: 20px;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+
+            .nav-item {
+                font-size: 35px;
+                color: rgb(38, 182, 182);
+                margin-right: 20px;
+                &:hover {
+                    color: rgb(19, 219, 219);
+                }
+            }
+        }
+
+        .menu-btn {
+            border: none;
+            cursor: pointer;
+            display: none;
+            background-color: transparent;
+            font-size: 36px;
+            color: rgb(38, 182, 182);
+            padding-top: 10px;
+            outline: none;
+        }
+
+        .screen {
+            position: fixed;
+            top: 75px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000061;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        @media (max-width: 660px) {
+            .menu-btn {
+                display: block;
+                position: absolute;
+                left: 20px;
+                top: 0px;
+            }
+
+            .navbar-nav {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                position: fixed;
+                text-align: center;
+                top: 75px;
+                right: 0;
+                background: #f1f1f1eb;
+                border-left: 2px solid rgba(223, 218, 218, 0.6);
+                transform: translate(100%, 0);
+                transition: transform 0.6s;
+
+                a {
+                    height: 5rem;
+                    width: 8rem;
+                    font-size: 18px;
+                    border-bottom: 1px solid #c8c8c8;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+
+                }
+            }
+
+            &.opened-menu {
+                nav {
+                    transform: translate(0, 0);
+                }
+
+                .screen {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
