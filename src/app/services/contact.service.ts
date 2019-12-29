@@ -15,7 +15,6 @@ export class ContactService {
         if (user.contactList) this.contactList = user.contactList
         else this.contactList = contacts
       })
-
   }
 
   getContacts(): Observable<Contact[]> {
