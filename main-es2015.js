@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h4>Transfer BitCoin to:\n    <br />\n    {{contactName}}\n</h4>\n<fa name=\"bitcoin\"></fa>\n<input #input type=\"number\" min=\"0\" [max]=\"user.coins\" placeholder=\"0\" class=\"transfer-input\" />\n<fa (click)=\"onTransfer(input.value)\" name=\"send\" class=\"my-icons send-icon\"></fa>");
+/* harmony default export */ __webpack_exports__["default"] = ("<form (ngSubmit)=\"onTransfer($event,input.value)\">\n    <h4>Transfer BitCoin to:\n        <br />\n        {{contactName}}\n    </h4>\n    <fa name=\"bitcoin\"></fa>\n    <input #input type=\"number\" min=\"0\" [max]=\"user.coins\" placeholder=\"0\" class=\"transfer-input\" />\n    <fa (click)=\"onTransfer($event,input.value)\" name=\"send\" class=\"my-icons send-icon\"></fa>\n</form>");
 
 /***/ }),
 
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h3>Please enter your name: </h3>\n<input #input type=\"text\" />\n<button (click)=\"signup(input.value)\">Signup</button>");
+/* harmony default export */ __webpack_exports__["default"] = ("<form (ngSubmit)=\"signup($event,input.value)\">\n    <h3>Please enter your name: </h3>\n    <input #input type=\"text\" />\n    <button (click)=\"signup($event,input.value)\">Signup</button>\n</form>");
 
 /***/ }),
 
@@ -797,7 +797,7 @@ ContactListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".contact-prev {\n  display: flex;\n  border: 1px solid #0A090C;\n  border-radius: 50px;\n  max-width: 250px;\n  padding: 2px 10px;\n  margin: 5px auto;\n  justify-content: space-between;\n  background-color: #ffffffc7;\n  cursor: pointer;\n}\n.contact-prev p {\n  margin-right: 10px;\n}\n.contact-prev:hover {\n  text-decoration: underline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jb250YWN0LXByZXZpZXcvQzpcXFVzZXJzXFxEb3RhblxcRGVza3RvcFxcbWlzdGVyLWJpdGNvaW4tYW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcY29udGFjdC1wcmV2aWV3XFxjb250YWN0LXByZXZpZXcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2NvbXBvbmVudHMvY29udGFjdC1wcmV2aWV3L2NvbnRhY3QtcHJldmlldy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSx5QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsOEJBQUE7RUFDQSwyQkFBQTtFQUNBLGVBQUE7QUNDSjtBRENJO0VBQ0ksa0JBQUE7QUNDUjtBREVJO0VBQ0ksMEJBQUE7QUNBUiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY29udGFjdC1wcmV2aWV3L2NvbnRhY3QtcHJldmlldy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWN0LXByZXYge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICMwQTA5MEM7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MHB4O1xyXG4gICAgbWF4LXdpZHRoOiAyNTBweDtcclxuICAgIHBhZGRpbmc6IDJweCAxMHB4O1xyXG4gICAgbWFyZ2luOiA1cHggYXV0bztcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmZjNztcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuXHJcbiAgICBwIHtcclxuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7XHJcbiAgICB9XHJcblxyXG4gICAgJjpob3ZlciB7XHJcbiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XHJcbiAgICB9XHJcblxyXG59IiwiLmNvbnRhY3QtcHJldiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGJvcmRlcjogMXB4IHNvbGlkICMwQTA5MEM7XG4gIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gIG1heC13aWR0aDogMjUwcHg7XG4gIHBhZGRpbmc6IDJweCAxMHB4O1xuICBtYXJnaW46IDVweCBhdXRvO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmZjNztcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmNvbnRhY3QtcHJldiBwIHtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xufVxuLmNvbnRhY3QtcHJldjpob3ZlciB7XG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".contact-prev {\n  display: flex;\n  border: 1px solid #0A090C;\n  border-radius: 50px;\n  max-width: 250px;\n  padding: 2px 10px;\n  margin: 5px auto;\n  outline: none;\n  justify-content: space-between;\n  background-color: #ffffffc7;\n  cursor: pointer;\n}\n.contact-prev p {\n  margin-right: 10px;\n}\n.contact-prev:hover {\n  text-decoration: underline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jb250YWN0LXByZXZpZXcvQzpcXFVzZXJzXFxEb3RhblxcRGVza3RvcFxcbWlzdGVyLWJpdGNvaW4tYW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcY29udGFjdC1wcmV2aWV3XFxjb250YWN0LXByZXZpZXcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2NvbXBvbmVudHMvY29udGFjdC1wcmV2aWV3L2NvbnRhY3QtcHJldmlldy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSx5QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsMkJBQUE7RUFDQSxlQUFBO0FDQ0o7QURDSTtFQUNJLGtCQUFBO0FDQ1I7QURFSTtFQUNJLDBCQUFBO0FDQVIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2NvbnRhY3QtcHJldmlldy9jb250YWN0LXByZXZpZXcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFjdC1wcmV2IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMEEwOTBDO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNTBweDtcclxuICAgIG1heC13aWR0aDogMjUwcHg7XHJcbiAgICBwYWRkaW5nOiAycHggMTBweDtcclxuICAgIG1hcmdpbjogNXB4IGF1dG87XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZmM3O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG5cclxuICAgIHAge1xyXG4gICAgICAgIG1hcmdpbi1yaWdodDogMTBweDtcclxuICAgIH1cclxuXHJcbiAgICAmOmhvdmVyIHtcclxuICAgICAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxuICAgIH1cclxuXHJcbn0iLCIuY29udGFjdC1wcmV2IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYm9yZGVyOiAxcHggc29saWQgIzBBMDkwQztcbiAgYm9yZGVyLXJhZGl1czogNTBweDtcbiAgbWF4LXdpZHRoOiAyNTBweDtcbiAgcGFkZGluZzogMnB4IDEwcHg7XG4gIG1hcmdpbjogNXB4IGF1dG87XG4gIG91dGxpbmU6IG5vbmU7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZmM3O1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4uY29udGFjdC1wcmV2IHAge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG4uY29udGFjdC1wcmV2OmhvdmVyIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59Il19 */");
 
 /***/ }),
 
@@ -966,7 +966,8 @@ let TransferFundComponent = class TransferFundComponent {
     }
     ngOnInit() {
     }
-    onTransfer(amount) {
+    onTransfer(ev, amount) {
+        ev.preventDefault();
         this.transfer.emit(amount);
     }
 };
@@ -1336,26 +1337,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/user.service */ "./src/app/services/user.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _services_contact_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/contact.service */ "./src/app/services/contact.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 
 let SignupPageComponent = class SignupPageComponent {
-    constructor(userService, router) {
+    constructor(contactService, userService, router) {
+        this.contactService = contactService;
         this.userService = userService;
         this.router = router;
     }
     ngOnInit() {
     }
-    signup(username) {
-        this.userService.signup(username);
+    signup(ev, username) {
+        ev.preventDefault();
+        const contactList = this.contactService.contactList;
+        const user = { username, contactList };
+        this.userService.signup(user);
         this.router.navigate(['/']);
     }
 };
 SignupPageComponent.ctorParameters = () => [
+    { type: _services_contact_service__WEBPACK_IMPORTED_MODULE_3__["ContactService"] },
     { type: _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
 ];
 SignupPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1518,7 +1526,7 @@ let ContactService = class ContactService {
         this.userService = userService;
         this.userService.getLoggedinUser()
             .subscribe(user => {
-            if (user.contactList)
+            if (user)
                 this.contactList = user.contactList;
             else
                 this.contactList = _data_contacts_json__WEBPACK_IMPORTED_MODULE_3__;
@@ -1636,10 +1644,10 @@ let UserService = class UserService {
         user.moves.unshift(transfer);
         this.updateUser(user);
     }
-    signup(name) {
-        var user = JSON.parse(localStorage.getItem(name));
+    signup({ username, contactList }) {
+        var user = JSON.parse(localStorage.getItem(username));
         if (!user) {
-            user = this._newUser(name);
+            user = this._newUser(username, contactList);
             localStorage.setItem(user.name, JSON.stringify(user));
         }
         localStorage.setItem("loggedinUser", JSON.stringify(user));
@@ -1657,8 +1665,9 @@ let UserService = class UserService {
             at: Date.now()
         };
     }
-    _newUser(name) {
+    _newUser(name, contactList) {
         return {
+            contactList,
             name,
             coins: 100,
             moves: []

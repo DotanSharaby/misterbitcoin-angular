@@ -191,7 +191,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h4>Transfer BitCoin to:\n    <br />\n    {{contactName}}\n</h4>\n<fa name=\"bitcoin\"></fa>\n<input #input type=\"number\" min=\"0\" [max]=\"user.coins\" placeholder=\"0\" class=\"transfer-input\" />\n<fa (click)=\"onTransfer(input.value)\" name=\"send\" class=\"my-icons send-icon\"></fa>";
+    __webpack_exports__["default"] = "<form (ngSubmit)=\"onTransfer($event,input.value)\">\n    <h4>Transfer BitCoin to:\n        <br />\n        {{contactName}}\n    </h4>\n    <fa name=\"bitcoin\"></fa>\n    <input #input type=\"number\" min=\"0\" [max]=\"user.coins\" placeholder=\"0\" class=\"transfer-input\" />\n    <fa (click)=\"onTransfer($event,input.value)\" name=\"send\" class=\"my-icons send-icon\"></fa>\n</form>";
     /***/
   },
 
@@ -291,7 +291,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h3>Please enter your name: </h3>\n<input #input type=\"text\" />\n<button (click)=\"signup(input.value)\">Signup</button>";
+    __webpack_exports__["default"] = "<form (ngSubmit)=\"signup($event,input.value)\">\n    <h3>Please enter your name: </h3>\n    <input #input type=\"text\" />\n    <button (click)=\"signup($event,input.value)\">Signup</button>\n</form>";
     /***/
   },
 
@@ -1495,7 +1495,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".contact-prev {\n  display: flex;\n  border: 1px solid #0A090C;\n  border-radius: 50px;\n  max-width: 250px;\n  padding: 2px 10px;\n  margin: 5px auto;\n  justify-content: space-between;\n  background-color: #ffffffc7;\n  cursor: pointer;\n}\n.contact-prev p {\n  margin-right: 10px;\n}\n.contact-prev:hover {\n  text-decoration: underline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jb250YWN0LXByZXZpZXcvQzpcXFVzZXJzXFxEb3RhblxcRGVza3RvcFxcbWlzdGVyLWJpdGNvaW4tYW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcY29udGFjdC1wcmV2aWV3XFxjb250YWN0LXByZXZpZXcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2NvbXBvbmVudHMvY29udGFjdC1wcmV2aWV3L2NvbnRhY3QtcHJldmlldy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSx5QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsOEJBQUE7RUFDQSwyQkFBQTtFQUNBLGVBQUE7QUNDSjtBRENJO0VBQ0ksa0JBQUE7QUNDUjtBREVJO0VBQ0ksMEJBQUE7QUNBUiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY29udGFjdC1wcmV2aWV3L2NvbnRhY3QtcHJldmlldy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWN0LXByZXYge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICMwQTA5MEM7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MHB4O1xyXG4gICAgbWF4LXdpZHRoOiAyNTBweDtcclxuICAgIHBhZGRpbmc6IDJweCAxMHB4O1xyXG4gICAgbWFyZ2luOiA1cHggYXV0bztcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmZjNztcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuXHJcbiAgICBwIHtcclxuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7XHJcbiAgICB9XHJcblxyXG4gICAgJjpob3ZlciB7XHJcbiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XHJcbiAgICB9XHJcblxyXG59IiwiLmNvbnRhY3QtcHJldiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGJvcmRlcjogMXB4IHNvbGlkICMwQTA5MEM7XG4gIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gIG1heC13aWR0aDogMjUwcHg7XG4gIHBhZGRpbmc6IDJweCAxMHB4O1xuICBtYXJnaW46IDVweCBhdXRvO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmZjNztcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmNvbnRhY3QtcHJldiBwIHtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xufVxuLmNvbnRhY3QtcHJldjpob3ZlciB7XG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufSJdfQ== */";
+    __webpack_exports__["default"] = ".contact-prev {\n  display: flex;\n  border: 1px solid #0A090C;\n  border-radius: 50px;\n  max-width: 250px;\n  padding: 2px 10px;\n  margin: 5px auto;\n  outline: none;\n  justify-content: space-between;\n  background-color: #ffffffc7;\n  cursor: pointer;\n}\n.contact-prev p {\n  margin-right: 10px;\n}\n.contact-prev:hover {\n  text-decoration: underline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jb250YWN0LXByZXZpZXcvQzpcXFVzZXJzXFxEb3RhblxcRGVza3RvcFxcbWlzdGVyLWJpdGNvaW4tYW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcY29udGFjdC1wcmV2aWV3XFxjb250YWN0LXByZXZpZXcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2NvbXBvbmVudHMvY29udGFjdC1wcmV2aWV3L2NvbnRhY3QtcHJldmlldy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSx5QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsMkJBQUE7RUFDQSxlQUFBO0FDQ0o7QURDSTtFQUNJLGtCQUFBO0FDQ1I7QURFSTtFQUNJLDBCQUFBO0FDQVIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2NvbnRhY3QtcHJldmlldy9jb250YWN0LXByZXZpZXcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFjdC1wcmV2IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMEEwOTBDO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNTBweDtcclxuICAgIG1heC13aWR0aDogMjUwcHg7XHJcbiAgICBwYWRkaW5nOiAycHggMTBweDtcclxuICAgIG1hcmdpbjogNXB4IGF1dG87XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZmM3O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG5cclxuICAgIHAge1xyXG4gICAgICAgIG1hcmdpbi1yaWdodDogMTBweDtcclxuICAgIH1cclxuXHJcbiAgICAmOmhvdmVyIHtcclxuICAgICAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxuICAgIH1cclxuXHJcbn0iLCIuY29udGFjdC1wcmV2IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYm9yZGVyOiAxcHggc29saWQgIzBBMDkwQztcbiAgYm9yZGVyLXJhZGl1czogNTBweDtcbiAgbWF4LXdpZHRoOiAyNTBweDtcbiAgcGFkZGluZzogMnB4IDEwcHg7XG4gIG1hcmdpbjogNXB4IGF1dG87XG4gIG91dGxpbmU6IG5vbmU7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZmM3O1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4uY29udGFjdC1wcmV2IHAge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG4uY29udGFjdC1wcmV2OmhvdmVyIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59Il19 */";
     /***/
   },
 
@@ -1793,7 +1793,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {}
       }, {
         key: "onTransfer",
-        value: function onTransfer(amount) {
+        value: function onTransfer(ev, amount) {
+          ev.preventDefault();
           this.transfer.emit(amount);
         }
       }]);
@@ -2440,16 +2441,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _services_contact_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../services/contact.service */
+    "./src/app/services/contact.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
 
     var SignupPageComponent =
     /*#__PURE__*/
     function () {
-      function SignupPageComponent(userService, router) {
+      function SignupPageComponent(contactService, userService, router) {
         _classCallCheck(this, SignupPageComponent);
 
+        this.contactService = contactService;
         this.userService = userService;
         this.router = router;
       }
@@ -2459,8 +2467,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {}
       }, {
         key: "signup",
-        value: function signup(username) {
-          this.userService.signup(username);
+        value: function signup(ev, username) {
+          ev.preventDefault();
+          var contactList = this.contactService.contactList;
+          var user = {
+            username: username,
+            contactList: contactList
+          };
+          this.userService.signup(user);
           this.router.navigate(['/']);
         }
       }]);
@@ -2470,9 +2484,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     SignupPageComponent.ctorParameters = function () {
       return [{
+        type: _services_contact_service__WEBPACK_IMPORTED_MODULE_3__["ContactService"]
+      }, {
         type: _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
       }];
     };
 
@@ -2767,7 +2783,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.userService = userService;
         this.userService.getLoggedinUser().subscribe(function (user) {
-          if (user.contactList) _this8.contactList = user.contactList;else _this8.contactList = _data_contacts_json__WEBPACK_IMPORTED_MODULE_3__;
+          if (user) _this8.contactList = user.contactList;else _this8.contactList = _data_contacts_json__WEBPACK_IMPORTED_MODULE_3__;
         });
       }
 
@@ -2961,11 +2977,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "signup",
-        value: function signup(name) {
-          var user = JSON.parse(localStorage.getItem(name));
+        value: function signup(_ref) {
+          var username = _ref.username,
+              contactList = _ref.contactList;
+          var user = JSON.parse(localStorage.getItem(username));
 
           if (!user) {
-            user = this._newUser(name);
+            user = this._newUser(username, contactList);
             localStorage.setItem(user.name, JSON.stringify(user));
           }
 
@@ -2990,8 +3008,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "_newUser",
-        value: function _newUser(name) {
+        value: function _newUser(name, contactList) {
           return {
+            contactList: contactList,
             name: name,
             coins: 100,
             moves: []
